@@ -4,40 +4,51 @@ export interface Branch {
   lat: number;
   lng: number;
   city: string;
-  type: 'Area' | 'Branch' | 'Division' | 'District';
+  type: 'Area' | 'Branch' | 'Division' | 'District' | 'NoArea';
   areaId?: number | string;
 }
 
 // yellow
 export const divisionBranches: Branch[] = [
-  { id: 700, name: "Manila Main", lat: 14.5995, lng: 120.9842, city: "Manila", type: 'Division' },
+  { id: 1, name: "Division 1", lat: 15.954, lng: 120.5764, city: "City of Urdaneta, Pangasinan", type: 'Division' },
+  { id: 2, name: "Division 2", lat: 14.67962645, lng: 121.0852443, city: "Quezon City, NCR, Second District", type: 'Division' },
+  { id: 3, name: "Division 6", lat: 13.1559, lng: 123.7354, city: "Legazpi City, Albay", type: 'Division' },
+  { id: 4, name: "Division 8", lat: 10.66667, lng: 122.95, city: "Bacolod City, Negros Occidental", type: 'Division' },
+  { id: 5, name: "Division 3", lat: 10.31438679, lng: 123.8845187, city: "Cebu City, Cebu", type: 'Division' },
+  { id: 6, name: "Division 5", lat: 8.497815, lng: 124.6435059, city: "Cagayan de Oro City, Misamis Oriental", type: 'Division' },
+  { id: 7, name: "Division 4", lat: 7.108798482, lng: 125.6253905, city: "Davao City, Davao del Sur", type: 'Division' },
 ];
 
 // Green
 export const districtBranches: Branch[] = [
-  { id: 600, name: "Cebu Hub", lat: 10.3157, lng: 123.8854, city: "Cebu City", type: 'District' },
+  { id: 1, name: "Division 7 District 17", lat: 17.62961, lng: 121.73765, city: "Tuguegaro City, Cagayan", type: 'District' },
+  { id: 2, name: "Division 1 District 1", lat: 16.31436, lng: 120.3688, city: "Agoo, La union", type: 'District' },
+  { id: 3, name: "Division 1 District 2", lat: 15.98162, lng: 120.56136, city: "City of Urdaneta, Pangasinan", type: 'District' },
+  { id: 4, name: "Division 7 District 23", lat: 15.789417, lng: 120.979111, city: "San Jose City, Nueva Ecija", type: 'District' },
+  { id: 5, name: "Division 1 District 3", lat: 15.05227, lng: 120.71303, city: "Mexico, Pampanga", type: 'District' },
+  { id: 6, name: "Division 7 District 4", lat: 14.820722, lng: 120.906722, city: "Balagtas, Bulacan", type: 'District' },
+  { id: 7, name: "Division 2 District 24", lat: 14.590622, lng: 120.97997, city: "City of Manila - Intramuros, NCR, First District, City of Manila", type: 'District' },
+  { id: 8, name: "Division 2 District 5", lat: 14.45667, lng: 120.98195, city: "City of Las Piñas, NCR, Fourth District", type: 'District' },
+  { id: 9, name: "Division 2 District 6", lat: 13.96618, lng: 121.16635, city: "Lipa City, Batangas", type: 'District' },
+  { id: 10, name: "Division 6 District 16", lat: 13.15716, lng: 123.74552, city: "Legazpi City, Albay", type: 'District' },
+  { id: 11, name: "Division 2 District 19", lat: 12.746207, lng: 121.488033, city: "Bongabong, Oriental Mindoro", type: 'District' },
+  { id: 12, name: "Division 6 District 21", lat: 12.370861, lng: 123.626944, city: "City of Masbate, Masbate", type: 'District' },
+  { id: 13, name: "Division 2 District 18", lat: 9.733755, lng: 118.7418104, city: "Puerto Princesa City, Palawan", type: 'District' },
+  { id: 14, name: "Division 8 District 7", lat: 10.6489119, lng: 122.9626015, city: "Bacolod City, Negros Occidental", type: 'District' },
+  { id: 15, name: "Division 3 District 9", lat: 10.324451, lng: 123.884513, city: "Cebu City, Cebu", type: 'District' },
+  { id: 16, name: "Division 6 District 15", lat: 13.63916, lng: 123.18819, city: "Naga City, Camarines Sur", type: 'District' },
+  { id: 17, name: "Division 3 District 10", lat: 10.33151, lng: 123.94486, city: "Mandaue City, Cebu", type: 'District' },
+  { id: 18, name: "Division 8 District 8", lat: 9.293072, lng: 123.30123, city: "Dumaguete City, Negros Oriental", type: 'District' },
+  { id: 19, name: "Division 5 District 14", lat: 8.95848, lng: 125.52603, city: "Butuan City, Agusan del Norte", type: 'District' },
+  { id: 20, name: "Division 5 District 13", lat: 8.47251, lng: 124.68534, city: "Cagayan de Oro City, Misamis Oriental", type: 'District' },
+  { id: 21, name: "Division 5 District 20", lat: 8.14657, lng: 123.84753, city: "Ozamis City, Misamis Occidental", type: 'District' },
+  { id: 22, name: "Division 4 District 25", lat: 7.60362, lng: 125.96755, city: "Nabunturan, Compostela Valley", type: 'District' },
+  { id: 23, name: "Division 4 District 11", lat: 7.29863, lng: 125.68302, city: "City of Panabo, Davao del Norte", type: 'District' },
+  { id: 24, name: "Division 4 District 22", lat: 6.7455, lng: 125.35099, city: "City of Digos, Davao del Sur", type: 'District' },
+  { id: 25, name: "Division 4 District 12", lat: 6.12702, lng: 125.16802, city: "General Santos City, South Cotabato", type: 'District' },
 ];
 
-// // Blue  
-// export const areaBranches: Branch[] = [
-//   { id: 400, name: "Area 3(Base) Branch 311", lat: 18.1720833, lng: 120.591805, city: "San Nicolas", type: 'Area' },
-// //   { id: 401, name: "Area 81(Base) Branch 444", lat: 18.34355, lng: 121.41593, city: "Abulug", type: 'Area' },
-// //   { id: 402, name: "Area 150(Base) Branch 389", lat: 18.18373, lng: 121.6607, city: "Lal-lo", type: 'Area' },
-// //   { id: 404, name: "Area 109(Base) Branch 405", lat: 18.06007, lng: 121.6426, city: "Gattaran", type: 'Area' },
-// //   { id: 405, name: "Area 2(Base) Branch 283", lat: 17.5566934, lng: 120.3815, city: "Vigan", type: 'Area' },
-// //   { id: 406, name: "Area 92(Base) Branch 339", lat: 17.62961, lng: 121.73765, city: "Tuguegaro", type: 'Area' },
-// ];
-
-// // Orange
-// export const regularBranches: Branch[] = [
-//   { id: 1, name: "Area 3 Branch 399 - Bangui", lat: 18.53906, lng: 120.76591, city: "Sample", type: 'Branch' },
-//   { id: 2, name: "Area 3 Branch 431 - Bacarra", lat: 18.289955, lng: 120.5992167, city: "Sample", type: 'Branch' },
-//   { id: 3, name: "Area 3 Branch 733 - Laoag", lat: 18.1900517, lng: 120.5726885, city: "Sample", type: 'Branch' },
-//   { id: 4, name: "Area 3 Branch 432 - Dingras", lat: 18.1041484, lng: 120.6959321, city: "Sample", type: 'Branch' },
-//   { id: 5, name: "Area 3 Branch 310 - Batac", lat: 18.049277, lng: 120.567749, city: "Sample", type: 'Branch' },
-// //   { id: 7, name: "Area 3 Branch 733 - Laoag", lat: 18.1900517, lng: 120.5726885, city: "Sample", type: 'Branch' },
-// ];
-
+// Blue
 export const areaBranches: Branch[] = [
   { id: "a", name: "Area 3(Base) Branch 311", lat: 18.1720833, lng: 120.591805, city: "San Nicolas", type: 'Area' },
   { id: "b", name: "Area 81(Base) Branch 444", lat: 18.34355, lng: 121.41593, city: "Abulug", type: 'Area' },
@@ -153,11 +164,48 @@ export const areaBranches: Branch[] = [
   { id: "h4", name: "Area 39(Base) Branch 75", lat: 9.293093, lng: 123.301325, city: "Dumaguete 1", type: 'Area' },
   { id: "i4", name: "Area 152(Base) Branch 644", lat: 9.12757, lng: 123.635795, city: "Siquijor 2", type: 'Area' },
   { id: "j4", name: "Area 145(Base) Branch 14", lat: 9.625795, lng: 125.567028, city: "Placer", type: 'Area' },
-  { id: "k4", name: "Area 152(Base) Branch 644", lat: 9.12757, lng: 123.635795, city: "Siquijor 2", type: 'Area' },
-  { id: "l4", name: "Area 152(Base) Branch 644", lat: 9.12757, lng: 123.635795, city: "Siquijor 2", type: 'Area' },
+  { id: "k4", name: "Area 71(Base) Branch 256", lat: 9.778618, lng: 126.074484, city: "Surigao City", type: 'Area' },
+  { id: "l4", name: "Area 70(Base) Branch 328", lat: 9.068756, lng: 126.205126, city: "Tandag", type: 'Area' },
+  { id: "m4", name: "Area 68(Base) Branch 177", lat: 8.958312, lng: 125.526052, city: "Butuan 1", type: 'Area' },
+  { id: "n4", name: "Area 123(Base) Branch 196", lat: 8.511378, lng: 125.977384, city: "San Francisco", type: 'Area' },
+  { id: "o4", name: "Area 69(Base) Branch 180", lat: 9.001961, lng: 124.87801, city: "Talisayan", type: 'Area' },
+  { id: "p4", name: "Area 144(Base) Branch 163", lat: 8.653345, lng: 124.753854, city: "Jasaan", type: 'Area' },
+  { id: "q4", name: "Area 122(Base) Branch 161", lat: 8.472605, lng: 124.685183, city: "Gusa", type: 'Area' },
+  { id: "r4", name: "Area 66(Base) Branch 143", lat: 8.497867, lng: 124.642422, city: "Kauswagan", type: 'Area' },
+  { id: "s4", name: "Area 65(Base) Branch 203", lat: 8.245852, lng: 124.259574, city: "Iligan 3", type: 'Area' },
+  { id: "t4", name: "Area 63(Base) Branch 260", lat: 8.146622, lng: 123.84759, city: "Ozamiz", type: 'Area' },
+  { id: "u4", name: "Area 98(Base) Branch 356", lat: 7.923528, lng: 123.776143, city: "Lala", type: 'Area' },
+  { id: "v4", name: "Area 133(Base) Branch 366", lat: 8.561893, lng: 123.651083, city: "Calamba", type: 'Area' },
+  { id: "w4", name: "Area 64(Base) Branch 548", lat: 8.51726, lng: 123.10035, city: "Manukan", type: 'Area' },
+  { id: "x4", name: "Area 124(Base) Branch 357", lat: 7.823951, lng: 123.434549, city: "Pagadian City", type: 'Area' },
+  { id: "y4", name: "Area 97(Base) Branch 522", lat: 7.780751, lng: 122.590308, city: "Ipil 2", type: 'Area' },
+  { id: "z4", name: "Area 146(Base) Branch 705", lat: 6.93915, lng: 122.088214, city: "Zamboanga City 1", type: 'Area' },
+  { id: "a5", name: "Area 72(Base) Branch 129", lat: 7.902074, lng: 125.089036, city: "Valencia City", type: 'Area' },
+  { id: "b5", name: "Area 121(Base) Branch 194", lat: 7.833921, lng: 126.061021, city: "Monkayo", type: 'Area' },
+  { id: "c5", name: "Area 84(Base) Branch 496", lat: 7.792622, lng: 126.442582, city: "Cateel", type: 'Area' },
+  { id: "d5", name: "Area 103(Base) Branch 534", lat: 7.585134, lng: 125.817167, city: "New Corella", type: 'Area' },
+  { id: "e5", name: "Area 53(Base) Branch 99", lat: 7.603844, lng: 125.967814, city: "Nabunturan", type: 'Area' },
+  { id: "f5", name: "Area 56(Base) Branch 98", lat: 7.298649, lng: 125.68317, city: "Panabo City 2", type: 'Area' },
+  { id: "g5", name: "Area 57(Base) Branch 533", lat: 7.133342, lng: 125.89836, city: "Pantukan", type: 'Area' },
+  { id: "h5", name: "Area 117(Base) Branch 65", lat: 7.142193, lng: 125.660267, city: "Panacan", type: 'Area' },
+  { id: "i5", name: "Area 55(Base) Branch 60", lat: 7.101169, lng: 125.616714, city: "Buhangin", type: 'Area' },
+  { id: "j5", name: "Area 54(Base) Branch 68", lat: 7.091284, lng: 125.50152, city: "Mintal", type: 'Area' },
+  { id: "k5", name: "Area 67(Base) Branch 131", lat: 7.761945, lng: 125.005879, city: "Maramag", type: 'Area' },
+  { id: "l5", name: "Area 104(Base) Branch 335", lat: 7.036393, lng: 125.092267, city: "Kidapawan 2", type: 'Area' },
+  { id: "m5", name: "Area 143(Base) Branch 205", lat: 7.026305, lng: 125.089608, city: "Kidapawan 1", type: 'Area' },
+  { id: "n5", name: "Area 62(Base) Branch 351", lat: 7.083217, lng: 124.898171, city: "Midsayap", type: 'Area' },
+  { id: "o5", name: "Area 61(Base) Branch 82", lat: 6.742095, lng: 125.349111, city: "Digos City 2", type: 'Area' },
+  { id: "p5", name: "Area 120(Base) Branch 84", lat: 6.642555, lng: 125.348743, city: "Padada", type: 'Area' },
+  { id: "q5", name: "Area 119(Base) Branch 704", lat: 7.0078064, lng: 124.1623244, city: "Upi", type: 'Area' },
+  { id: "r5", name: "Area 60(Base) Branch 128", lat: 6.627515 , lng: 124.596753, city: "Isulan 2", type: 'Area' },
+  { id: "s5", name: "Area 142(Base) Branch 111", lat: 6.48885, lng: 124.861066, city: "Koronadal 1", type: 'Area' },
+  { id: "t5", name: "Area 59(Base) Branch 362", lat: 6.380699, lng: 124.749978, city: "Surallah 2", type: 'Area' },
+  { id: "u5", name: "Area 118(Base) Branch 484", lat: 5.863689, lng: 124.994635, city: "Maasim", type: 'Area' },
+  { id: "v5", name: "Area 58(Base) Branch 108", lat: 6.126237, lng: 125.171926, city: "General Santos City 2", type: 'Area' },
+  { id: "w5", name: "Area 96(Base) Branch 109", lat: 6.099261, lng: 125.287685, city: "Alabel", type: 'Area' },
 ];
 
-
+// Orange
 export const regularBranches: Branch[] = [
   { id: 1, name: "Area 3 Branch 399 - Bangui", lat: 18.53906, lng: 120.76591, city: "Sample", type: 'Branch', areaId: "a" },
   { id: 2, name: "Area 3 Branch 431 - Bacarra", lat: 18.289955, lng: 120.5992167, city: "Sample", type: 'Branch', areaId: "a" },
@@ -707,13 +755,13 @@ export const regularBranches: Branch[] = [
   // Division 8 District 7
   { id: 366, name: "Area 115 Branch 635 - Manapla", lat: 10.9577915, lng: 123.1218693, city: "Sample", type: 'Branch', areaId: "w3" },
   { id: 367, name: "Area 115 Branch 443 - Sagay 2", lat: 10.8918328, lng: 123.4167661, city: "Sample", type: 'Branch', areaId: "w3" },
-  { id: 368, name: "Area 115 Branch 48 -  Cadiz", lat: 10.9582266, lng: 123.3035064, city: "Sample", type: 'Branch', areaId: "w3" },
+  { id: 368, name: "Area 115 Branch 48  -  Cadiz", lat: 10.9582266, lng: 123.3035064, city: "Sample", type: 'Branch', areaId: "w3" },
 
   // Division 8 District 7
   // { id: 369, name: "Area 40 Branch 755 -  Toboso", lat: 10.9582266, lng: 123.3035064, city: "Sample", type: 'Branch', areaId: "x3" },
   { id: 370, name: "Area 40 Branch 602 - Calatrava", lat: 10.591929, lng: 123.482962, city: "Sample", type: 'Branch', areaId: "x3" },
   { id: 371, name: "Area 40 Branch 503 - Escalante 2", lat: 10.838307, lng: 123.497573, city: "Sample", type: 'Branch', areaId: "x3" },
-  { id: 372, name: "Area 40 Branch 52 -  Escalante", lat: 10.8382, lng: 123.499107, city: "Sample", type: 'Branch', areaId: "x3" },
+  { id: 372, name: "Area 40 Branch 52  - Escalante", lat: 10.8382, lng: 123.499107, city: "Sample", type: 'Branch', areaId: "x3" },
 
   // Division 8 District 7
   { id: 373, name: "Area 34 Branch 588 - Silay 2", lat: 10.7847558, lng: 122.9709207, city: "Sample", type: 'Branch', areaId: "y3" },
@@ -742,42 +790,275 @@ export const regularBranches: Branch[] = [
   { id: 388, name: "Area 43 Branch 649 - Isabela", lat: 10.2089754, lng: 122.9838533, city: "Sample", type: 'Branch', areaId: "c4" },
   { id: 389, name: "Area 43 Branch 592 - Pontevedra", lat: 10.369694, lng: 122.86775, city: "Sample", type: 'Branch', areaId: "c4" },
   { id: 390, name: "Area 43 Branch 589 - Himamaylan", lat: 10.1018597, lng: 122.8721906, city: "Sample", type: 'Branch', areaId: "c4" },
-  { id: 391, name: "Area 43 Branch 46 -  Binalbagan", lat: 10.1952373, lng: 122.8670026, city: "Sample", type: 'Branch', areaId: "c4" },
+  { id: 391, name: "Area 43 Branch 46  - Binalbagan", lat: 10.1952373, lng: 122.8670026, city: "Sample", type: 'Branch', areaId: "c4" },
 
   // Division 8 District 32
-  { id: 392, name: "Area 43 Branch 711 -  Jimalalud", lat: 9.975917, lng: 123.197333, city: "Sample", type: 'Branch', areaId: "d4" },
-  { id: 393, name: "Area 43 Branch 513 -  Canlaon", lat: 10.385555, lng: 123.22447, city: "Sample", type: 'Branch', areaId: "d4" },
-  { id: 394, name: "Area 43 Branch 66  -  Tayasan", lat: 9.865806, lng: 123.14594, city: "Sample", type: 'Branch', areaId: "d4" },
+  { id: 392, name: "Area 43 Branch 711 - Jimalalud", lat: 9.975917, lng: 123.197333, city: "Sample", type: 'Branch', areaId: "d4" },
+  { id: 393, name: "Area 43 Branch 513 - Canlaon", lat: 10.385555, lng: 123.22447, city: "Sample", type: 'Branch', areaId: "d4" },
+  { id: 394, name: "Area 43 Branch 66  - Tayasan", lat: 9.865806, lng: 123.14594, city: "Sample", type: 'Branch', areaId: "d4" },
 
   // Division 8 District 32
-  { id: 395, name: "Area 37 Branch 650  - Kabankalan 2", lat: 9.992837, lng: 122.812367, city: "Sample", type: 'Branch', areaId: "e4" },
-  { id: 396, name: "Area 37 Branch 370  - Mabinay", lat: 9.722656, lng: 122.930323, city: "Sample", type: 'Branch', areaId: "e4" },
-  { id: 397, name: "Area 37 Branch 57  -  Sipalay", lat: 9.748265, lng: 122.401084, city: "Sample", type: 'Branch', areaId: "e4" },
-  { id: 398, name: "Area 37 Branch 50  -  Cauayan", lat: 9.972258, lng: 122.622872, city: "Sample", type: 'Branch', areaId: "e4" },
+  { id: 395, name: "Area 37 Branch 650 - Kabankalan 2", lat: 9.992837, lng: 122.812367, city: "Sample", type: 'Branch', areaId: "e4" },
+  { id: 396, name: "Area 37 Branch 370 - Mabinay", lat: 9.722656, lng: 122.930323, city: "Sample", type: 'Branch', areaId: "e4" },
+  { id: 397, name: "Area 37 Branch 57  - Sipalay", lat: 9.748265, lng: 122.401084, city: "Sample", type: 'Branch', areaId: "e4" },
+  { id: 398, name: "Area 37 Branch 50  - Cauayan", lat: 9.972258, lng: 122.622872, city: "Sample", type: 'Branch', areaId: "e4" },
 
   // Division 8 District 8
-  { id: 399, name: "Area 38 Branch 680 -  Pamplona", lat: 9.472009, lng: 123.120836, city: "Sample", type: 'Branch', areaId: "f4" },
-  { id: 400, name: "Area 38 Branch 169 -  Santander", lat: 9.456904, lng: 123.30274, city: "Sample", type: 'Branch', areaId: "f4" },
-  { id: 401, name: "Area 38 Branch 59  -  Bais City", lat: 9.5872278, lng: 123.1193089, city: "Sample", type: 'Branch', areaId: "f4" },
+  { id: 399, name: "Area 38 Branch 680 - Pamplona", lat: 9.472009, lng: 123.120836, city: "Sample", type: 'Branch', areaId: "f4" },
+  { id: 400, name: "Area 38 Branch 169 - Santander", lat: 9.456904, lng: 123.30274, city: "Sample", type: 'Branch', areaId: "f4" },
+  { id: 401, name: "Area 38 Branch 59  - Bais City", lat: 9.5872278, lng: 123.1193089, city: "Sample", type: 'Branch', areaId: "f4" },
 
   // Division 8 District 32
-  { id: 402, name: "Area 134 Branch 77  -  Bayawan 2", lat: 9.368276, lng: 122.805201, city: "Sample", type: 'Branch', areaId: "g4" },
-  { id: 403, name: "Area 134 Branch 76  -  Siaton", lat: 9.063265, lng: 123.035158, city: "Sample", type: 'Branch', areaId: "g4" },
-  { id: 404, name: "Area 134 Branch 678 -  Hinoba-an", lat: 9.598479, lng: 122.470218, city: "Sample", type: 'Branch', areaId: "g4" },
+  { id: 402, name: "Area 134 Branch 77  - Bayawan 2", lat: 9.368276, lng: 122.805201, city: "Sample", type: 'Branch', areaId: "g4" },
+  { id: 403, name: "Area 134 Branch 76  - Siaton", lat: 9.063265, lng: 123.035158, city: "Sample", type: 'Branch', areaId: "g4" },
+  { id: 404, name: "Area 134 Branch 678 - Hinoba-an", lat: 9.598479, lng: 122.470218, city: "Sample", type: 'Branch', areaId: "g4" },
 
   // Division 6 District 30
-  { id: 405, name: "Area 39 Branch 758 -  Valencia", lat: 9.2950013, lng: 123.2455463, city: "Sample", type: 'Branch', areaId: "h4" },
-  { id: 406, name: "Area 39 Branch 687 -  Dauin", lat: 9.185715, lng: 123.260712, city: "Sample", type: 'Branch', areaId: "h4" },
-  { id: 407, name: "Area 39 Branch 636 -  Dumaguete 2", lat: 9.297437, lng: 123.300286, city: "Sample", type: 'Branch', areaId: "h4" },
+  { id: 405, name: "Area 39 Branch 758 - Valencia", lat: 9.2950013, lng: 123.2455463, city: "Sample", type: 'Branch', areaId: "h4" },
+  { id: 406, name: "Area 39 Branch 687 - Dauin", lat: 9.185715, lng: 123.260712, city: "Sample", type: 'Branch', areaId: "h4" },
+  { id: 407, name: "Area 39 Branch 636 - Dumaguete 2", lat: 9.297437, lng: 123.300286, city: "Sample", type: 'Branch', areaId: "h4" },
 
   // Division 8 District 8
-  { id: 408, name: "Area 152 Branch 760 -  Siquijor 3", lat: 9.21402778, lng: 123.47488889, city: "Sample", type: 'Branch', areaId: "i4" },
-  { id: 409, name: "Area 152 Branch 79  -  Sibulan", lat: 9.35842, lng: 123.287759, city: "Sample", type: 'Branch', areaId: "i4" },
-  { id: 410, name: "Area 152 Branch 314 -  Siquijor", lat: 9.242664, lng: 123.579062, city: "Sample", type: 'Branch', areaId: "i4" },
+  { id: 408, name: "Area 152 Branch 760 - Siquijor 3", lat: 9.21402778, lng: 123.47488889, city: "Sample", type: 'Branch', areaId: "i4" },
+  { id: 409, name: "Area 152 Branch 79  - Sibulan", lat: 9.35842, lng: 123.287759, city: "Sample", type: 'Branch', areaId: "i4" },
+  { id: 410, name: "Area 152 Branch 314 - Siquijor", lat: 9.242664, lng: 123.579062, city: "Sample", type: 'Branch', areaId: "i4" },
 
   // Division 5 District 14
-  { id: 411, name: "Area 145 Branch 694 -  Cagdianao", lat: 9.921525, lng: 125.671307, city: "Sample", type: 'Branch', areaId: "j4" },
-  { id: 412, name: "Area 145 Branch 668 -  Libjo", lat: 10.198492, lng: 125.536061, city: "Sample", type: 'Branch', areaId: "j4" },
-  { id: 413, name: "Area 145 Branch 646 -  San Jose", lat: 10.00938, lng: 125.574227, city: "Sample", type: 'Branch', areaId: "j4" },
+  { id: 411, name: "Area 145 Branch 694 - Cagdianao", lat: 9.921525, lng: 125.671307, city: "Sample", type: 'Branch', areaId: "j4" },
+  { id: 412, name: "Area 145 Branch 668 - Libjo", lat: 10.198492, lng: 125.536061, city: "Sample", type: 'Branch', areaId: "j4" },
+  { id: 413, name: "Area 145 Branch 646 - San Jose", lat: 10.00938, lng: 125.574227, city: "Sample", type: 'Branch', areaId: "j4" },
   // { id: 414, name: "Area 145 Branch 747 -  Sison", lat: 9.242664, lng: 123.579062, city: "Sample", type: 'Branch', areaId: "m4" },
-];  
+
+  // Division 5 District 14
+  { id: 414, name: "Area 71 Branch 549 - Kitcharao", lat: 9.450518, lng: 125.575231, city: "Sample", type: 'Branch', areaId: "k4" },
+  { id: 415, name: "Area 71 Branch 491 - Siargao 2", lat: 9.867279, lng: 125.972815, city: "Sample", type: 'Branch', areaId: "k4" },
+  { id: 416, name: "Area 71 Branch 490 - siargao 1", lat: 9.75834, lng: 126.054936, city: "Sample", type: 'Branch', areaId: "k4" },
+
+  // Division 5 District 14
+  { id: 417, name: "Area 70 Branch 550 - Gamut", lat: 9.004811, lng: 126.165843, city: "Sample", type: 'Branch', areaId: "l4" },
+  { id: 418, name: "Area 70 Branch 479 - Claver", lat: 9.574511, lng: 125.730487, city: "Sample", type: 'Branch', areaId: "l4" },
+  { id: 419, name: "Area 70 Branch 329 - Cantilan", lat: 9.332699, lng: 125.97356, city: "Sample", type: 'Branch', areaId: "l4" },
+  { id: 420, name: "Area 70 Branch 327 - San Agustin", lat: 8.831643, lng: 126.217498, city: "Sample", type: 'Branch', areaId: "l4" },
+
+  // Division 5 District 14
+  { id: 421, name: "Area 68 Branch 710 - Butuan City 3", lat: 8.961685, lng: 125.604665, city: "Sample", type: 'Branch', areaId: "m4" },
+  { id: 422, name: "Area 68 Branch 255 - Cabadbaran", lat: 9.119031, lng: 125.531494, city: "Sample", type: 'Branch', areaId: "m4" },
+  { id: 423, name: "Area 68 Branch 179 - Nasipit", lat: 8.984456, lng: 125.341696, city: "Sample", type: 'Branch', areaId: "m4" },
+  { id: 424, name: "Area 68 Branch 178 - Butuan 2", lat: 8.94496, lng: 125.487336, city: "Sample", type: 'Branch', areaId: "m4" },
+
+  // Division 5 District 14
+  { id: 425, name: "Area 123 Branch 575 - Prosperidad", lat: 8.600569, lng: 125.911696, city: "Sample", type: 'Branch', areaId: "n4" },
+  { id: 426, name: "Area 123 Branch 478 - Tagbina", lat: 8.453087, lng: 126.163497, city: "Sample", type: 'Branch', areaId: "n4" },
+  { id: 427, name: "Area 123 Branch 326 - Mangagoy", lat: 8.183167, lng: 126.355752, city: "Sample", type: 'Branch', areaId: "n4" },
+  { id: 428, name: "Area 123 Branch 226 - Bayugan", lat: 8.714517, lng: 125.758165, city: "Sample", type: 'Branch', areaId: "n4" },
+
+  // Division 5 District 13
+  { id: 429, name: "Area 69 Branch 591 - Salay", lat: 8.856319, lng: 124.786437, city: "Sample", type: 'Branch', areaId: "o4" },
+  { id: 430, name: "Area 69 Branch 359 - Camiguin", lat: 9.242073, lng: 124.728831, city: "Sample", type: 'Branch', areaId: "o4" },
+  // { id: 431, name: "Area 69 Branch 746 - Magsaysay", lat: 8.714517, lng: 125.758165, city: "Sample", type: 'Branch', areaId: "o4" },
+  { id: 432, name: "Area 69 Branch 181 - Gingoog", lat: 8.827339, lng: 125.102257, city: "Sample", type: 'Branch', areaId: "o4" },
+
+  // Division 5 District 13
+  { id: 433, name: "Area 144 Branch 667 - Claveria", lat: 8.61263, lng: 124.88892, city: "Sample", type: 'Branch', areaId: "p4" },
+  { id: 434, name: "Area 144 Branch 162 - Balingasag", lat: 8.74132, lng: 124.776154, city: "Sample", type: 'Branch', areaId: "p4" },
+  { id: 435, name: "Area 144 Branch 159 - Tagoloan", lat: 8.533596, lng: 124.754118, city: "Sample", type: 'Branch', areaId: "p4" },
+
+  // Division 5 District 13
+  { id: 436, name: "Area 122 Branch 654 - Kisolon", lat: 8.333491, lng: 124.97646, city: "Sample", type: 'Branch', areaId: "q4" },
+  { id: 437, name: "Area 122 Branch 141 - Bugo", lat: 8.509085, lng: 124.76587, city: "Sample", type: 'Branch', areaId: "q4" },
+  { id: 438, name: "Area 122 Branch 133 - Manolo Fortich", lat: 8.370473, lng: 124.859642, city: "Sample", type: 'Branch', areaId: "q4" },
+  
+  // Division 5 District 13
+  { id: 439, name: "Area 66 Branch 552 - Talakag", lat: 8.230746, lng: 124.599478, city: "Sample", type: 'Branch', areaId: "r4" },
+  { id: 440, name: "Area 66 Branch 142 - Camaman-an", lat: 8.474451, lng: 124.660803, city: "Sample", type: 'Branch', areaId: "r4" },
+  { id: 441, name: "Area 66 Branch 140 - Bulua", lat: 8.503875, lng: 124.614203, city: "Sample", type: 'Branch', areaId: "r4" },
+  { id: 442, name: "Area 66 Branch 139 - Balulang", lat: 8.45471, lng: 124.624517, city: "Sample", type: 'Branch', areaId: "r4" },
+
+  // Division 5 District 20
+  { id: 443, name: "Area 65 Branch 551 - Manticao", lat: 8.393912, lng: 124.282735, city: "Sample", type: 'Branch', areaId: "s4" },
+  { id: 444, name: "Area 65 Branch 204 - Initao", lat: 8.497702, lng: 124.303821, city: "Sample", type: 'Branch', areaId: "s4" },
+  { id: 445, name: "Area 65 Branch 202 - Iligan 2", lat: 8.239943, lng: 124.241107, city: "Sample", type: 'Branch', areaId: "s4" },
+  { id: 446, name: "Area 65 Branch 160 - El Salvador City", lat: 8.560044, lng: 124.52258, city: "Sample", type: 'Branch', areaId: "s4" },
+
+  // Division 5 District 20
+  { id: 447, name: "Area 63 Branch 616 - Tangub City", lat: 8.061662, lng: 123.746064, city: "Sample", type: 'Branch', areaId: "t4" },
+  { id: 448, name: "Area 63 Branch 400 - Maigo", lat: 8.163417, lng: 123.954605, city: "Sample", type: 'Branch', areaId: "t4" },
+  // { id: 449, name: "Area 63 Branch 750 - Clarin", lat: 8.497702, lng: 124.303821, city: "Sample", type: 'Branch', areaId: "t4" },
+  { id: 450, name: "Area 63 Branch 201 - Iligan 1", lat: 8.210397, lng: 124.226737, city: "Sample", type: 'Branch', areaId: "t4" },
+
+  // Division 5 District 20
+  { id: 451, name: "Area 98 Branch 626 - Lala 2", lat: 7.972343, lng: 123.747912, city: "Sample", type: 'Branch', areaId: "u4" },
+  { id: 452, name: "Area 98 Branch 574 - Kapatagan", lat: 7.899423, lng: 123.773648, city: "Sample", type: 'Branch', areaId: "u4" },
+  { id: 453, name: "Area 98 Branch 492 - Aurora", lat: 7.945377, lng: 123.582552, city: "Sample", type: 'Branch', areaId: "u4" },
+  { id: 454, name: "Area 98 Branch 480 - Tubod", lat: 8.048941, lng: 123.795187, city: "Sample", type: 'Branch', areaId: "u4" },
+
+  // Division 5 District 20
+  { id: 455, name: "Area 133 Branch 643 - Plaridel", lat: 8.606158, lng: 123.721977, city: "Sample", type: 'Branch', areaId: "v4" },
+  { id: 456, name: "Area 133 Branch 264 - Dapitan", lat: 8.652562, lng: 123.424297, city: "Sample", type: 'Branch', areaId: "v4" },
+  { id: 457, name: "Area 133 Branch 262 - Oroquieta", lat: 8.479655, lng: 123.795786, city: "Sample", type: 'Branch', areaId: "v4" },
+  { id: 458, name: "Area 133 Branch 261 - Jimenez", lat: 8.334189, lng: 123.837312, city: "Sample", type: 'Branch', areaId: "v4" },
+
+  // Divison 5 Districtc 29
+  // { id: 459, name: "Area 64 Branch 738 - Polanco", lat: 8.334189, lng: 123.837312, city: "Sample", type: 'Branch', areaId: "w4" },
+  { id: 460, name: "Area 64 Branch 358 - Sindangan", lat: 8.23621, lng: 123.00001, city: "Sample", type: 'Branch', areaId: "w4" },
+  { id: 461, name: "Area 64 Branch 263 - Dipolog", lat: 8.589606, lng: 123.340974, city: "Sample", type: 'Branch', areaId: "w4" },
+
+  // Division 5 District 29
+  { id: 462, name: "Area 124 Branch 613 - San Miguel", lat: 7.647282, lng: 123.267257, city: "Sample", type: 'Branch', areaId: "x4" },
+  { id: 463, name: "Area 124 Branch 495 - Mahayag", lat: 8.118298, lng: 123.436171, city: "Sample", type: 'Branch', areaId: "x4" },
+  { id: 464, name: "Area 124 Branch 489 - Buug", lat: 7.731519, lng: 123.061069, city: "Sample", type: 'Branch', areaId: "x4" },
+  { id: 465, name: "Area 124 Branch 334 - Molave 1", lat: 8.100321, lng: 123.482665, city: "Sample", type: 'Branch', areaId: "x4" },
+
+  // Division 5 District 29
+  { id: 466, name: "Area 97 Branch 556 - Kabasalan", lat: 7.801782, lng: 122.754806, city: "Sample", type: 'Branch', areaId: "y4" },
+  { id: 467, name: "Area 97 Branch 488 - Imelda", lat: 7.640868, lng: 122.932389, city: "Sample", type: 'Branch', areaId: "y4" },
+  { id: 468, name: "Area 97 Branch 409 - Ipil", lat: 7.786708, lng: 122.584213, city: "Sample", type: 'Branch', areaId: "y4" },
+  { id: 469, name: "Area 97 Branch 406 - Liloy", lat: 8.12089, lng: 122.68332, city: "Sample", type: 'Branch', areaId: "y4" },
+
+  // Division 5 District 29
+  // { id: 470, name: "Area 146 Branch 737 - Zamboanga City 4", lat: 8.12089, lng: 122.68332, city: "Sample", type: 'Branch', areaId: "z4" },
+  { id: 471, name: "Area 146 Branch 723 - Zamboanga City 3", lat: 6.93011, lng: 122.064263, city: "Sample", type: 'Branch', areaId: "z4" },
+  { id: 472, name: "Area 146 Branch 712 - Zamboanga City 4", lat: 6.9339151, lng: 122.0882141, city: "Sample", type: 'Branch', areaId: "z4" },
+
+  // Division 5 District 13
+  { id: 473, name: "Area 146 Branch 718 - Aglayan", lat: 8.055504, lng: 125.136724, city: "Sample", type: 'Branch', areaId: "a5" },
+  { id: 474, name: "Area 146 Branch 655 - Quezon", lat: 7.744889, lng: 125.115559, city: "Sample", type: 'Branch', areaId: "a5" },
+  { id: 475, name: "Area 146 Branch 577 - Cabanglasan", lat: 8.078778, lng: 125.301835, city: "Sample", type: 'Branch', areaId: "a5" },
+  { id: 476, name: "Area 146 Branch 130 - Malaybalay City", lat: 8.141248, lng: 125.120817, city: "Sample", type: 'Branch', areaId: "a5" },
+
+  // Division 4 District 25
+  { id: 477, name: "Area 121 Branch 595 - Veruela", lat: 8.025395, lng: 125.946502, city: "Sample", type: 'Branch', areaId: "b5" },
+  { id: 478, name: "Area 121 Branch 195 - Trento", lat: 8.0391, lng: 126.062527, city: "Sample", type: 'Branch', areaId: "b5" },
+  { id: 479, name: "Area 121 Branch 183 - Compostela", lat: 7.673405, lng: 126.090435, city: "Sample", type: 'Branch', areaId: "b5" },
+
+  // Division 4 District 25
+  { id: 480, name: "Area 84 Branch 564 - Compostela 2", lat: 7.662362, lng: 126.087077, city: "Sample", type: 'Branch', areaId: "c5" },
+  { id: 481, name: "Area 84 Branch 411 - Manay", lat: 7.219329, lng: 126.542005, city: "Sample", type: 'Branch', areaId: "c5" },
+  { id: 482, name: "Area 84 Branch 410 - Banganga", lat: 7.574958, lng: 126.560586, city: "Sample", type: 'Branch', areaId: "c5" },
+
+  // Division 4 District 25
+  { id: 483, name: "Area 103 Branch 573 - Asuncion", lat: 7.54054, lng: 125.752235, city: "Sample", type: 'Branch', areaId: "d5" },
+  { id: 484, name: "Area 103 Branch 482 - Laak", lat: 7.81544, lng: 125.787151, city: "Sample", type: 'Branch', areaId: "d5" },
+  { id: 485, name: "Area 103 Branch 271 - Kapalong", lat: 7.585125, lng: 125.712508, city: "Sample", type: 'Branch', areaId: "d5" },
+
+  // Division 4 District 25
+  { id: 486, name: "Area 53 Branch 642 - Mawab", lat: 7.511381, lng: 125.924503, city: "Sample", type: 'Branch', areaId: "e5" },
+  { id: 487, name: "Area 53 Branch 517 - Maragusan", lat: 7.318013, lng: 126.118319, city: "Sample", type: 'Branch', areaId: "e5" },
+  { id: 488, name: "Area 53 Branch 101 - Tagum City 2", lat: 7.457001, lng: 125.811372, city: "Sample", type: 'Branch', areaId: "e5" },
+  { id: 489, name: "Area 53 Branch 100 - Tagum City 1", lat: 7.455795, lng: 125.81553, city: "Sample", type: 'Branch', areaId: "e5" },
+
+  // Division 4 District 11
+  { id: 490, name: "Area 56 Branch 562 - Carmen", lat: 7.351007, lng: 125.705745, city: "Sample", type: 'Branch', areaId: "f5" },
+  { id: 491, name: "Area 56 Branch 518 - Sto. Thomas 2", lat: 7.531635, lng: 125.627858, city: "Sample", type: 'Branch', areaId: "f5" },
+  { id: 492, name: "Area 56 Branch 184 - Sto. Thomas", lat: 7.531801, lng: 125.628039, city: "Sample", type: 'Branch', areaId: "f5" },
+  { id: 493, name: "Area 56 Branch 97  - Panabo City 1", lat: 7.29868, lng: 125.6831, city: "Sample", type: 'Branch', areaId: "f5" },
+
+  // Division 4 District 25
+  { id: 494, name: "Area 57 Branch 695 - Maco", lat: 7.3704027, lng: 125.8519015, city: "Sample", type: 'Branch', areaId: "g5" },
+  { id: 495, name: "Area 57 Branch 286 - Mati City", lat: 6.958369, lng: 126.210651, city: "Sample", type: 'Branch', areaId: "g5" },
+  { id: 496, name: "Area 57 Branch 285 - Governor Generoso", lat: 6.627007, lng: 126.080045, city: "Sample", type: 'Branch', areaId: "g5" },
+  { id: 497, name: "Area 57 Branch 284 - Lupon", lat: 6.893685, lng: 126.010904, city: "Sample", type: 'Branch', areaId: "g5" },
+
+  // Division 4 District 11
+  { id: 498, name: "Area 117 Branch 603 - Samal 3", lat: 7.086194, lng: 125.703701, city: "Sample", type: 'Branch', areaId: "h5" },
+  { id: 499, name: "Area 117 Branch 481 - Samal 2", lat: 6.961981, lng: 125.725039, city: "Sample", type: 'Branch', areaId: "h5" },
+  { id: 500, name: "Area 117 Branch 182 - Samal 1", lat: 7.138585, lng: 125.691739, city: "Sample", type: 'Branch', areaId: "h5" },
+  { id: 501, name: "Area 117 Branch 64  - Agdao", lat: 7.09401, lng: 125.639307, city: "Sample", type: 'Branch', areaId: "h5" },
+
+  // Division 4 District 11
+  { id: 502, name: "Area 55 Branch 631 - Ma-a", lat: 7.08055, lng: 125.59005, city: "Sample", type: 'Branch', areaId: "i5" },
+  { id: 503, name: "Area 55 Branch 497 - Bunawan Davao City", lat: 7.237634, lng: 125.636344, city: "Sample", type: 'Branch', areaId: "i5" },
+  { id: 504, name: "Area 55 Branch 436 - Tibungco", lat: 7.19176, lng: 125.642885, city: "Sample", type: 'Branch', areaId: "i5" },
+  { id: 505, name: "Area 55 Branch 63  - Matina", lat: 7.051866, lng: 125.58276, city: "Sample", type: 'Branch', areaId: "i5" },
+
+  // Division 4 District 11
+  { id: 506, name: "Area 54 Branch 721 - Marilog", lat: 7.276847, lng: 125.311565, city: "Sample", type: 'Branch', areaId: "j5" },
+  { id: 507, name: "Area 54 Branch 337 - Calinan", lat: 7.185891, lng: 125.453831, city: "Sample", type: 'Branch', areaId: "j5" },
+  { id: 508, name: "Area 54 Branch 80  - Toril 2", lat: 7.01004, lng: 125.49784, city: "Sample", type: 'Branch', areaId: "j5" },
+  { id: 509, name: "Area 54 Branch 71  - Toril 1", lat: 7.008863, lng: 125.49902, city: "Sample", type: 'Branch', areaId: "j5" },
+
+  // Division 5 District 13
+  { id: 510, name: "Area 67 Branch 593 - Kalilangan", lat: 7.7417, lng: 124.750149, city: "Sample", type: 'Branch', areaId: "k5" },
+  { id: 511, name: "Area 67 Branch 510 - Kibawe", lat: 7.56993, lng: 124.990832, city: "Sample", type: 'Branch', areaId: "k5" },
+  { id: 512, name: "Area 67 Branch 408 - Wao", lat: 7.641329, lng: 124.72863, city: "Sample", type: 'Branch', areaId: "k5" },
+  { id: 513, name: "Area 67 Branch 132 - Don Carlos", lat: 7.68004, lng: 124.96233, city: "Sample", type: 'Branch', areaId: "k5" },
+
+  // Divisin 4 District 22
+  { id: 514, name: "Area 104 Branch 645 - Magpet", lat: 7.102456, lng: 125.119305, city: "Sample", type: 'Branch', areaId: "l5" },
+  { id: 515, name: "Area 104 Branch 596 - Arakan", lat: 7.345644, lng: 125.128549, city: "Sample", type: 'Branch', areaId: "l5" },
+  { id: 516, name: "Area 104 Branch 426 - Antipas", lat: 7.250513, lng: 125.055724, city: "Sample", type: 'Branch', areaId: "l5" },
+
+  // Division 4 District 22
+  { id: 517, name: "Area 143 Branch 576 - Makilala", lat: 6.959478, lng: 125.088473, city: "Sample", type: 'Branch', areaId: "m5" },
+  { id: 518, name: "Area 143 Branch 511 - Mlang", lat: 6.942483, lng: 124.88358, city: "Sample", type: 'Branch', areaId: "m5" },
+  { id: 519, name: "Area 143 Branch 206 - Matalam", lat: 7.086326, lng: 124.898622, city: "Sample", type: 'Branch', areaId: "m5" },
+
+  // Division 4 District 28
+  { id: 520, name: "Area 62 Branch 700 - Alamada", lat: 7.38079, lng: 124.560712, city: "Sample", type: 'Branch', areaId: "n5" },
+  { id: 521, name: "Area 62 Branch 536 - Kabacan", lat: 7.106686, lng: 124.821215, city: "Sample", type: 'Branch', areaId: "n5" },
+  { id: 522, name: "Area 62 Branch 532 - Libungan", lat: 7.240072, lng: 124.52203, city: "Sample", type: 'Branch', areaId: "n5" },
+  // { id: 523, name: "Area 62 Branch 739 - Aleosan", lat: 7.086326, lng: 124.898622, city: "Sample", type: 'Branch', areaId: "n5" },
+
+  // Division 4 District 22
+  { id: 523, name: "Area 61 Branch 611 - Matanao", lat: 6.705531, lng: 125.216488, city: "Sample", type: 'Branch', areaId: "o5" },
+  { id: 524, name: "Area 61 Branch 563 - Sta. Cruz", lat: 6.843238, lng: 125.410159, city: "Sample", type: 'Branch', areaId: "o5" },
+  { id: 525, name: "Area 61 Branch 83  - Bansalan", lat: 6.77512, lng: 125.219551, city: "Sample", type: 'Branch', areaId: "o5" },
+  { id: 526, name: "Area 61 Branch 81  - Digos City 1", lat: 6.742265, lng: 125.355894, city: "Sample", type: 'Branch', areaId: "o5" },
+
+  // Division 4 District 22
+  { id: 527, name: "Area 120 Branch 597 - Sulop", lat: 6.599443, lng: 125.342143, city: "Sample", type: 'Branch', areaId: "p5" },
+  { id: 528, name: "Area 120 Branch 502 - Sta. Maria", lat: 6.558108, lng: 125.472552, city: "Sample", type: 'Branch', areaId: "p5" },
+  { id: 529, name: "Area 120 Branch 336 - Malita", lat: 6.415697, lng: 125.604813, city: "Sample", type: 'Branch', areaId: "p5" },
+
+  // Division 4 District 28
+  { id: 530, name: "Area 119 Branch 703 - Esperanza", lat: 6.7203, lng: 124.5173, city: "Sample", type: 'Branch', areaId: "q5" },
+  { id: 531, name: "Area 119 Branch 582 - Kalamansig", lat: 6.552497, lng: 124.051899, city: "Sample", type: 'Branch', areaId: "q5" },
+  { id: 532, name: "Area 119 Branch 572 - Lebak Sultan Kudarat", lat: 6.632278, lng: 124.067944, city: "Sample", type: 'Branch', areaId: "q5" },
+
+  // Division 4 District 28
+  { id: 533, name: "Area 60 Branch 610 - Tacurong 2", lat: 6.694002, lng: 124.684328, city: "Sample", type: 'Branch', areaId: "r5" },
+  { id: 534, name: "Area 60 Branch 540 - Sen. Ninoy Aquino", lat: 6.461304, lng: 124.332788, city: "Sample", type: 'Branch', areaId: "r5" },
+  { id: 535, name: "Area 60 Branch 127 - Tacurong 1", lat: 6.684269, lng: 124.67315, city: "Sample", type: 'Branch', areaId: "r5" },
+  { id: 536, name: "Area 60 Branch 126 - Isulan 1", lat: 6.619041703526523, lng: 124.59922828618792, city: "Sample", type: 'Branch', areaId: "r5" },
+
+  // Division 4 District 12
+  { id: 537, name: "Area 142 Branch 688 - Columbio", lat: 6.683042, lng: 124.957727, city: "Sample", type: 'Branch', areaId: "s5" },
+  { id: 538, name: "Area 142 Branch 583 - Tupi", lat: 6.331583, lng: 124.953639, city: "Sample", type: 'Branch', areaId: "s5" },
+  { id: 539, name: "Area 142 Branch 124 - Koronodal 2", lat: 6.492166, lng: 124.84367, city: "Sample", type: 'Branch', areaId: "s5" },
+
+  // Division 4 District 12
+  { id: 540, name: "Area 59 Branch 702 - Tboli 2", lat: 6.213213, lng: 124.819334, city: "Sample", type: 'Branch', areaId: "t5" },
+  { id: 541, name: "Area 59 Branch 606 - Tboli", lat: 6.219309, lng: 124.820644, city: "Sample", type: 'Branch', areaId: "t5" },
+  { id: 542, name: "Area 59 Branch 539 - Lake Sebu", lat: 6.22323, lng: 124.71167, city: "Sample", type: 'Branch', areaId: "t5" },
+  { id: 543, name: "Area 59 Branch 125 - Surallah 1", lat: 6.308534, lng: 124.753593, city: "Sample", type: 'Branch', areaId: "t5" },
+
+  // Division 4 District 12
+  { id: 544, name: "Area 118 Branch 714 - Palimbang", lat: 6.156917, lng: 124.281222, city: "Sample", type: 'Branch', areaId: "u5" },
+  { id: 545, name: "Area 118 Branch 584 - Kiamba", lat: 5.989194, lng: 124.624889, city: "Sample", type: 'Branch', areaId: "u5" },
+  { id: 546, name: "Area 118 Branch 501 - Maitum", lat: 6.058007, lng: 124.494613, city: "Sample", type: 'Branch', areaId: "u5" },
+
+  // Division 4 District 12
+  { id: 547, name: "Area 58 Branch 638 - General Santos City 4", lat: 6.133833, lng: 125.182833, city: "Sample", type: 'Branch', areaId: "v5" },
+  { id: 548, name: "Area 58 Branch 516 - General Santos City 3", lat: 6.07205, lng: 125.141357, city: "Sample", type: 'Branch', areaId: "v5" },
+  { id: 549, name: "Area 58 Branch 110 - Polomolok", lat: 6.228784, lng: 125.079541, city: "Sample", type: 'Branch', areaId: "v5" },
+  { id: 550, name: "Area 58 Branch 107 - General Santos City 1", lat: 6.124541, lng: 125.167887, city: "Sample", type: 'Branch', areaId: "v5" },
+
+  // Division 4 District 12
+  { id: 551, name: "Area 96 Branch 520 - Malungon 2", lat: 6.372953, lng: 125.273166, city: "Sample", type: 'Branch', areaId: "w5" },
+  // { id: 552, name: "Area 96 Branch 732 - Malapatan", lat: 6.228784, lng: 125.079541, city: "Sample", type: 'Branch', areaId: "w5" },
+  { id: 553, name: "Area 96 Branch 395 - Malungon", lat: 6.30712, lng: 125.253629, city: "Sample", type: 'Branch', areaId: "w5" },
+  { id: 554, name: "Area 96 Branch 338 - Glan", lat: 5.819755, lng: 125.202169, city: "Sample", type: 'Branch', areaId: "w5" },
+
+];
+
+export const NoAreaBranch: Branch [] = [
+  
+  // Division 8 District 7
+  { id: 555, name: "Area 155 Branch 748 - Iloilo City", lat: 10.691216, lng: 122.575288, city: "Sample", type: 'NoArea', },
+  // { id: 556, name: "Area 155 Branch 749 - Jaro", lat: 10.691216, lng: 122.575288, city: "Sample", type: 'Branch', areaId: "" },
+
+  // Division 4 District 28
+  { id: 557, name: "Area 154 Branch 731 - Parang", lat: 7.3702116, lng: 124.2677659, city: "Sample", type: 'NoArea', },
+  // { id: 558, name: "Area 154 Branch 724 - Cotabato City 1", lat: 7.3702116, lng: 124.2677659, city: "Sample", type: 'Branch', areaId: "" },
+  // { id: 559, name: "Area 154 Branch 730 - Awang", lat: 7.3702116, lng: 124.2677659, city: "Sample", type: 'Branch', areaId: "" },
+];

@@ -1,0 +1,39 @@
+areaBranches ((area) => {
+
+    const areaPrivateCluster = L.MarkerCluster({...})
+
+    const hubMarker = L.marker([area.lat, area.lng])
+        .bindPopup(`${area.name} (HUB)`)
+
+    areaPrivateCluster.addLayer(hubMarker)
+
+    const myBranches = regularBranches.filter(b => b.areaId === area.id)
+
+    myBranches.forEach((branch) => {
+        const bMarker = L.marker([branch.let, branch.lng])
+            .bindPopup(branch.name)
+        areaPrivateCluster.addLayer(bMarker)
+    })
+
+    map.addLayer(areaPrivateCluster)
+})
+
+areaBranches ((area) => {
+    
+    const areaPrivateCluster =L.MarkerCluster({....})
+
+    const hubMarker = L.marker([area.lat, area.lng])
+        .bindPopup(`${area.name} (HUB)`)
+
+    areaPrivateCluster.addLayer(hubMarker)
+
+    const myBranches = regularBranches.filter(b => b.areaId === area.id)
+
+    myBranches.forEach((branch) => {
+        const bMarker = L.marker([branch.let, branch.lng])
+            .bindPopup(branch.name)
+        areaPrivateCluster.addLayer(bMarker)
+    })
+
+    map.addLayer(areaPrivateCluster)
+})

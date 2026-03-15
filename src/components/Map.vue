@@ -9,7 +9,8 @@ import {
   divisionBranches, 
   districtBranches, 
   areaBranches, 
-  regularBranches, 
+  regularBranches,
+  NoAreaBranch, 
   type Branch 
 } from '../data/branches';
 import {
@@ -19,19 +20,24 @@ import {
   LayoutFilled,
 } from '@ant-design/icons-vue';
 
-const collapsed = ref<boolean>(false);
+const collapsed = ref<boolean>(true);
 const selectedKeys = ref<string[]>(['1']);
 let map: L.Map | null = null;
 
 const getMarkerIcon = (type: string) => {
   const colors: Record<string, string> = {
-    Division: '#FFD700', District: '#28A745', Area: '#007BFF', Branch: '#FD7E14'
+    Division: '#FFD700', District: '#28A745', Area: '#007BFF', Branch: '#FD7E14', NoArea: '#FD7E14'
   };
   return L.divIcon({
     className: 'custom-pin',
-    html: `<div style="background-color: ${colors[type] || '#666'}; width: 15px; height: 15px; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 4px rgba(0,0,0,0.4);"></div>`,
+    html: `<div style="background-color: ${colors[type] || '#666'}; 
+            width: 20px; 
+            height: 20px; 
+            border-radius: 50%; 
+            border: 2px solid white; 
+            box-shadow: 0 0 4px rgba(0,0,0,0.4);"></div>`,
     iconSize: [15, 15],
-    iconAnchor: [7, 7]
+    iconAnchor: [10, 10]
   });
 };
 
@@ -47,7 +53,7 @@ onMounted(() => {
     areaBranches.forEach((area: Branch) => {
         // private cluster area nga code basta
         const areaPrivateCluster = (L as any).markerClusterGroup({
-            showCoverageOnHover: true,
+            showCoverageOnHover: true,  
             chunkedLoading: true,
             zoomToBoundsOnClick: true,
             spiderfyOnMaxZoom: false,
@@ -62,8 +68,9 @@ onMounted(() => {
                             width: 30px; 
                             height: 30px; 
                             border-radius: 50%; 
-                            display: flex; align-items: center; justify-content: center; color: white; 
-                            font-weight: bold; 
+                            display: flex; align-items: center; 
+                            justify-content: center; color: white; 
+                            font-weight: bold;
                             border: 3px solid white; 
                             box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
                             <span>${cluster.getChildCount()}</span>
@@ -80,7 +87,7 @@ onMounted(() => {
         const hubMarker = L.marker([area.lat, area.lng], { 
             icon: getMarkerIcon('Area'),
             type: 'Area' 
-        } as any).bindPopup(`<b>${area.name} (HUB)</b>`);
+        } as any).bindPopup(`<b>${area.name, area.city}</b>`);
         areaPrivateCluster.addLayer(hubMarker);
 
         const myBranches = regularBranches.filter(b => b.areaId === area.id);
@@ -107,9 +114,12 @@ onMounted(() => {
     districtBranches.forEach((d: Branch) => {
         L.marker([d.lat, d.lng], { icon: getMarkerIcon('District') }).addTo(map!).bindPopup(d.name);
     });
+    NoAreaBranch.forEach((d: Branch) => {
+        L.marker([d.lat, d.lng], { icon: getMarkerIcon('NoArea') }).addTo(map!).bindPopup(d.name);
+    });
 
 
-    setTimeout(() => { map?.invalidateSize(); }, 400);
+    setTimeout(() => { map!.invalidateSize(); }, 400);
 });
 
 onUnmounted(() => { if (map) map.remove(); });
